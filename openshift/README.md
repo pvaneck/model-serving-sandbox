@@ -18,7 +18,9 @@ model serving containers.
       will be provided at a later time.
     - Instructions assume that the namespace used is `wml-serving`.
 2. Install the KFServing [TrainedModel CRD](https://github.com/kubeflow/kfserving/blob/master/config/crd/serving.kubeflow.org_trainedmodels.yaml)
-    - `oc apply -f https://raw.githubusercontent.com/kubeflow/kfserving/master/config/crd/serving.kubeflow.org_trainedmodels.yaml`
+   ```bash
+   oc apply -f https://raw.githubusercontent.com/kubeflow/kfserving/master/config/crd/serving.kubeflow.org_trainedmodels.yaml
+   ```
 
 WML-Serving + Model-Mesh will be installed in a single namespace and is namespace isolated. Therefore KFServing TrainedModels
 need to be created in the same namespace as WML-Serving.
