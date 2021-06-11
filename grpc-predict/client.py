@@ -19,6 +19,7 @@ if __name__ == "__main__":
     random_digit_label = digits.target[rand_int]
     print(random_digit_image)
     data = random_digit_image.reshape((1, -1))
+    print(data)
 
     tensor_contents = pb.InferTensorContents(fp32_contents=data[0])
 
@@ -29,10 +30,10 @@ if __name__ == "__main__":
         contents=tensor_contents
     )
 
-    metadata = (('mm-vmodel-id','example-sklearn-mnist-svm'),)
+    # metadata = (('mm-vmodel-id','example-sklearn-mnist-svm'),)
     inputs = [infer_input]
     request = pb.ModelInferRequest(model_name="example-sklearn-mnist-svm", inputs=inputs)
 
-    results, call = infer_client.ModelInfer.with_call(request=request, metadata=metadata)
+    results, call = infer_client.ModelInfer.with_call(request=request)
     print(results)
     print('Expected Result: {}'.format(random_digit_label))
