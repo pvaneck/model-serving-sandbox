@@ -89,7 +89,7 @@ lightgbm   -> mlserver-0.x
 Currently, the `memory` field is not used with the WML-Serving backend, but it is a required field in the TrainedModel CRD.
 Thus, any arbitrary memory amount can be passed in.
 
-### Checking
+### Check
 
 After deploying, list the TrainedModels to check the status.
 
@@ -106,7 +106,7 @@ NAME                 URL                                                       R
 example-sklearn-tm   grpc://wml-serving:8033?mm-vmodel-id=example-sklearn-tm   True    12s
 ```
 
-### Performing Inference
+### Perform Inference
 
 Currently, only gRPC inference requests are supported. By default, WML-Serving uses a
 [headless Service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services)
