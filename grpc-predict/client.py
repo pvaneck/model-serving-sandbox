@@ -30,7 +30,6 @@ if __name__ == "__main__":
         contents=tensor_contents
     )
 
-    # metadata = (('mm-vmodel-id','example-sklearn-mnist-svm'),)
     inputs = [infer_input]
     request = pb.ModelInferRequest(model_name="example-sklearn-mnist-svm", inputs=inputs)
 
