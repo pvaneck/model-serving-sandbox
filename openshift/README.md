@@ -11,6 +11,19 @@ model serving containers.
 
 ![Model-Mesh Diagram](./model-mesh1.png)
 
+**Note**: This was tested on OpenShift 4.6.28 deployed on IBM Cloud.
+
+## Prerequisites
+
+1. Access to an OpenShift Cluster
+    - You will need to be authenticated with your cluster through the `oc` CLI.
+    - If using OpenShift on IBM Cloud, the login command can be found from the OpenShift console dashboard by clicking
+      your account name in the top left, then clicking `Copy Login Command`, and then `Display Token`. Copy the displayed
+      command into your terminal. Example:
+       ```bash
+       oc login --token=sha256~qG2afaRVh4D82642REZz7jxnxLyzfkoG6sfZJjInjAg --server=https://c104-e.us-south.containers.cloud.ibm.com:31885
+       ```
+
 ## Installation
 
 1. Install WML-Serving with Model-Mesh
