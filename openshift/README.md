@@ -39,7 +39,7 @@ WML-Serving + Model-Mesh will be installed in a single namespace and is namespac
 need to be created in the same namespace as WML-Serving.
 
 ---
-**NOTE**
+### Demo cluster login
 
 A cluster is currently available and can be accessed to try this out. First make sure you also have the [IBM Cloud CLI](https://cloud.ibm.com/docs/cli?topic=cli-install-ibmcloud-cli) installed as well. Then authenticate with the cluster using the following sequence of commands,
 replacing `<apikey>` with the API key that was given to you.
