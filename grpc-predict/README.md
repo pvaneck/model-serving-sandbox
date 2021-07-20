@@ -29,5 +29,5 @@ pip install -r requirements.txt
 Run inference.
 
 ```sh
-python client.py
+python client.py <predictor_name>
 ```

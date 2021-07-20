@@ -1,3 +1,4 @@
+import argparse
 import random
 
 import grpc_predict_v2_pb2 as pb
@@ -8,6 +9,11 @@ from sklearn import datasets
 
 
 if __name__ == "__main__":
+
+    parser = argparse.ArgumentParser(description='Perform a gRPC inference request')
+    parser.add_argument('model', type=str, help='Name of model resource')
+    args = parser.parse_args()
+
     channel = grpc.insecure_channel('localhost:8033')
     infer_client = pb_grpc.GRPCInferenceServiceStub(channel)
 
@@ -31,7 +37,7 @@ if __name__ == "__main__":
     )
 
     inputs = [infer_input]
-    request = pb.ModelInferRequest(model_name="example-sklearn-mnist-svm", inputs=inputs)
+    request = pb.ModelInferRequest(model_name=args.model, inputs=inputs)
 
     results, call = infer_client.ModelInfer.with_call(request=request)
     print(results)
