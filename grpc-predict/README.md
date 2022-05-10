@@ -1,6 +1,6 @@
-## gRPC Inference using KFServing V2 Protocol
+## gRPC Inference using KServe V2 Protocol
 
-The gRPC files were generated from the KFServing [grpc_predict_v2.proto](https://github.com/kubeflow/kfserving/blob/master/docs/predict-api/v2/grpc_predict_v2.proto) file.
+The gRPC files were generated from the KServe [grpc_predict_v2.proto](https://github.com/kserve/kserve/blob/master/docs/predict-api/v2/grpc_predict_v2.proto) file.
 
 Command used to generate:
 
