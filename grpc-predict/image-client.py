@@ -54,7 +54,7 @@ def preprocess(img, dtype, c, h, w, scaling):
     else:
         sample_img = img.convert('RGB')
 
-    resized_img = sample_img.resize((w, h), Image.BILINEAR)
+    resized_img = sample_img.resize((w, h), Image.Resampling.BILINEAR)
     resized = np.array(resized_img)
     if resized.ndim == 2:
         resized = resized[:, :, np.newaxis]
@@ -108,7 +108,6 @@ if __name__ == "__main__":
     img = Image.open(args.image_path)
 
     processed_img = preprocess(img, dtype, c, h, w, scaling)
-    print(processed_img)
     channel = grpc.insecure_channel('localhost:8033')
     infer_client = pb_grpc.GRPCInferenceServiceStub(channel)
 
